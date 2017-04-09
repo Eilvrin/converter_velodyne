@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>converter_velodyne</name>
+  <version>0.0.0</version>
+  <description> converter from velodyne to velodyne16 packets.</description>
+  <license>BSD</license>
+  <maintainer email="o.o.kutkina@gmail.com">Oksana Kutkina</maintainer>
+  <author>Oksana Kutkina</author>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  
+  <run_depend>roscpp</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>message_runtime</run_depend>
+
+</package>
