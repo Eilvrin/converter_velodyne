@@ -4,27 +4,15 @@ project(converter_velodyne)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
-  message_generation
+  velodyne_msgs
 )
 
 # Use C++11
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-add_message_files(
-  FILES
-  Velodyne16Packet.msg
-  VelodynePacket.msg
-  VelodyneScan.msg
-)
-
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-)
-
 catkin_package(
   INCLUDE_DIRS include
-  CATKIN_DEPENDS roscpp std_msgs message_runtime
+  CATKIN_DEPENDS roscpp std_msgs velodyne_msgs velodyne16
 )
 
 include_directories( include
@@ -32,6 +20,7 @@ include_directories( include
 )
 
 add_executable(converter_velodyne_node src/converter_velodyne_node.cpp src/converter_velodyne.cpp)
+add_dependencies(converter_velodyne_node ${catkin_EXPORTED_TARGETS})
 target_link_libraries(converter_velodyne_node ${catkin_LIBRARIES} )
 
 

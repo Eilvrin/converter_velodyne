@@ -1,3 +1,1 @@
-frame_id: "velodyne16"
-use_velodyne_frame_id: false
-end_of_pkt_timestamp: true
+frame_id: "" # If specified, frame_id is overwritten
