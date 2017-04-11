@@ -1,0 +1,9 @@
+<!-- -*- mode: XML -*- -->
+
+<launch>
+	<node pkg="nodelet" type="nodelet" name="standalone_nodelet"  args="manager"/>
+    <node pkg="nodelet" type="nodelet" name="converter_velodyne_nodelet"
+          args="load converter_velodyne/ConverterVelodyneNodelet standalone_nodelet">
+        <rosparam file="$(find converter_velodyne)/config/converter_velodyne.yaml" command="load"/>
+    </node>
+</launch>

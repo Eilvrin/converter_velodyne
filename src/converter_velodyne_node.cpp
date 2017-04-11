@@ -12,7 +12,7 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "converter_velodyne_node");
   ros::NodeHandle node;
   ros::NodeHandle private_nh("~");
-  ConverterVelodyne conv(node, private_nh);
+  converter_velodyne::ConverterVelodyne conv(node, private_nh);
   // handle callbacks until shut down
   ros::spin();
 

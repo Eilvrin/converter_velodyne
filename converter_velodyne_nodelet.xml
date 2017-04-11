@@ -1,0 +1,9 @@
+<library path="lib/libconverter_velodyne_nodelet">
+    <class name="converter_velodyne/ConverterVelodyneNodelet"
+           type="converter_velodyne::ConverterVelodyneNodelet"
+           base_class_type="nodelet::Nodelet">
+        <description>
+            Converts from velodyne to velodyne16 packets.
+        </description>
+    </class>
+</library>

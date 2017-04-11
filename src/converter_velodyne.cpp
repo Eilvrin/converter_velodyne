@@ -1,4 +1,6 @@
 #include "converter_velodyne/converter_velodyne.h"
+namespace converter_velodyne
+{
 
  ConverterVelodyne::ConverterVelodyne(ros::NodeHandle node, ros::NodeHandle private_nh)
   {
@@ -28,3 +30,5 @@
       velodyne16_packet_.publish(pkt);
     }
   }
+
+} // converter_velodyne

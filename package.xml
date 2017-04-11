@@ -2,7 +2,7 @@
 <package>
   <name>converter_velodyne</name>
   <version>0.0.0</version>
-  <description> converter from velodyne to velodyne16 packets.</description>
+  <description> Converter from velodyne to velodyne16 packets.</description>
   <license>BSD</license>
   <maintainer email="o.o.kutkina@gmail.com">Oksana Kutkina</maintainer>
   <author>Oksana Kutkina</author>
@@ -13,10 +13,16 @@
   <build_depend>std_msgs</build_depend>
   <build_depend>velodyne_msgs</build_depend>
   <build_depend>velodyne16</build_depend>
+  <build_depend>nodelet</build_depend>
   
   <run_depend>roscpp</run_depend>
   <run_depend>std_msgs</run_depend>
   <run_depend>velodyne_msgs</run_depend>
   <run_depend>velodyne16</run_depend>
+  <run_depend>nodelet</run_depend>
+
+  <export>
+    <nodelet plugin="${prefix}/converter_velodyne_nodelet.xml"/>
+  </export>
 
 </package>

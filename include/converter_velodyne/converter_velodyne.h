@@ -9,20 +9,24 @@
 #include <velodyne_msgs/VelodyneScan.h>
 #include <velodyne16/VelodynePacket.h>
 
-
-class ConverterVelodyne
+namespace converter_velodyne
 {
 
-public:
+  class ConverterVelodyne
+  {
 
-  ConverterVelodyne(ros::NodeHandle node, ros::NodeHandle private_nh);
+  public:
 
-private:
-  void convertScan(const velodyne_msgs::VelodyneScan::ConstPtr &scanMsg);
-  ros::Subscriber velodyne_scan_;
-  ros::Publisher velodyne16_packet_;
+    ConverterVelodyne(ros::NodeHandle node, ros::NodeHandle private_nh);
 
-  std::string frame_id_;   // Frame_id for output velodyne16 packets
-};
+  private:
+    void convertScan(const velodyne_msgs::VelodyneScan::ConstPtr &scanMsg);
+    ros::Subscriber velodyne_scan_;
+    ros::Publisher velodyne16_packet_;
+
+    std::string frame_id_;   // Frame_id for output velodyne16 packets
+  };
+
+} // converter_velodyne
 
 #endif // CONVERTER_VELODYNE_H
