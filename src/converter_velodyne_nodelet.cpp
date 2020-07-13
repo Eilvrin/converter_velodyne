@@ -36,5 +36,4 @@ namespace converter_velodyne
 // Register this plugin with pluginlib.
 //
 // parameters: package, class name, class type, base class type
-PLUGINLIB_DECLARE_CLASS(converter_velodyne, ConverterVelodyneNodelet,
-converter_velodyne::ConverterVelodyneNodelet, nodelet::Nodelet);
+PLUGINLIB_EXPORT_CLASS(converter_velodyne::ConverterVelodyneNodelet, nodelet::Nodelet)
