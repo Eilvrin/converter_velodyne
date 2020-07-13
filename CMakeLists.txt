@@ -5,6 +5,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
   velodyne_msgs
+  velodyne16
   nodelet
 )
 
